@@ -1,0 +1,111 @@
+.steps {
+
+  &__title {
+    @include on900 {
+      font-size: 30px;
+    }
+
+    @include on768 {
+      font-size: 15px;
+    }
+  }
+
+  &__list {
+    gap: 70px 25px;
+    counter-reset: number;
+
+    @include on1060 {
+      gap: 37px 35px;
+    }
+
+    @include on985 {
+      gap: 24px 20px;
+    }
+
+    @include on500 {
+      gap: 25px 40px;
+    }
+
+    @include on410 {
+      gap: 20px 25px;
+    }
+
+  }
+
+  &__item {
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+    position: relative;
+
+      &::before {
+        counter-increment: number;
+        content: '0' counter(number);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 30px;
+        font-family: 'Yeseva One', cursive;
+        color: $beige-light-color;
+
+        @include on800 {
+          font-size: 20px;
+        }
+      }
+
+      @include on1060{
+        gap:30px;
+      }
+
+      @include on985 {
+        gap: 20px;
+      }
+
+      @include on410 {
+        gap: 16px;
+      }
+  }
+
+  &__item.steps__item--even::before {
+    left: auto;
+    right: 0;
+  }
+
+  &__item:nth-child(n+10)::before{
+    content: counter(number);
+  }
+
+  &__item-text {
+    flex-basis: 174px;
+    padding-bottom: 40px;
+
+    @include on1060 {
+      flex-basis: 140px;
+    }
+
+    @include on985 {
+      flex-basis: 94px;
+    }
+
+    @include on800 {
+      font-size: 8px;
+    }
+
+    @include on410 {
+      font-size: 6px;
+    }
+  }
+
+  &__item-img {
+    object-fit: cover;
+
+    @include on1060{
+      width: 128px;
+    }
+
+    @include on800 {
+      width: 85px;
+    }
+    
+  }
+}

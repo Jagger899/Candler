@@ -1,0 +1,99 @@
+.certificates {
+  &__title {
+    @include on900 {
+      font-size: 30px;
+    }
+
+    @include on768 {
+      font-size: 15px;
+    }
+  }
+
+  &__container {
+    @include on608 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__description {
+    margin-right: 20px;
+    
+    @include on608 {
+      margin-right: auto;
+    }
+  }
+
+  &__content {
+    padding-bottom: 114px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-image: url("../images/products/candle.png");
+      height: 30px;
+      width: 22px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      bottom: 8px;
+      background-color: $beige-dark-color;
+      height: 1px;
+      width: 500%;
+    }
+  }
+
+  &__slider {
+    width: 1135px;
+    overflow: hidden;
+
+    @include on1060 {
+      width: 880px;
+    }
+
+    @include on608 {
+      width: 440px;
+      margin: 0 auto;
+    }
+
+    @include on380 {
+      width: 200px;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 50px;
+    text-align: left;
+
+    @include on1000 {
+      text-align: center;
+    }
+  }
+
+  .swiper__slide {
+    @include on1060 {
+      width: 280px;
+    }
+
+    @include on608 {
+      width: 200px;
+    }
+  }
+
+  &__img {
+    @include on1060 {
+      width: 280px;
+    }
+
+    @include on608 {
+      width: 200px;
+    }
+  }
+}

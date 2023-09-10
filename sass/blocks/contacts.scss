@@ -1,0 +1,28 @@
+.contacts {
+  padding: 150px 0 50px;
+
+  @include on500 {
+    padding: 50px 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {
+    @include on1000 {
+      width: 335px;
+      object-fit: cover;
+    }
+
+    @include on800 {
+      width: 187px;
+    }
+
+    @include on500 {
+      display: none;
+    }
+  }
+}

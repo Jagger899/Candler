@@ -1,0 +1,31 @@
+.courses {
+  &__content {
+    @include on1060 {
+      gap: 50px;
+    }
+
+    @include on985 {
+      gap: 35px;
+    }
+
+    @include on450 {
+      gap: 30px;
+    }
+
+    @include on410 {
+      grid-template-columns: auto;
+    }
+  }
+
+  &__card {
+    @include on410 {
+      width: 255px;
+    }
+  }
+
+  &__img {
+    @include on410 {
+      width: 255px;
+    }
+  }
+}

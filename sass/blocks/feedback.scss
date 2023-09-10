@@ -1,0 +1,221 @@
+.feedback {
+
+  &__container {
+
+    @include on1160 {
+      grid-template-columns: 260px auto;
+    }
+
+    @include on800 {
+      grid-template-columns: 200px auto;
+    }
+  }
+
+  &__description {
+    margin-right: 20px;
+
+    @include on480 {
+      margin-right: auto;
+    }
+  }
+
+  &__title {
+    
+    @include on900 {
+      font-size: 30px;
+    }
+
+    @include on768 {
+      font-size: 15px;
+    }
+  }
+
+  &__content {
+    padding-bottom: 110px;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-image: url("../images/products/candle.png");
+        height: 30px;
+        width: 22px;
+      }
+    
+      &::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        bottom: 8px;
+        background-color: $beige-dark-color;
+        height: 1px;
+        width: 500%;
+      }
+
+  }
+
+  // .swiper-wrapper {
+  //   height: 370px;
+  // }
+
+  &__slider{
+    width: 760px;
+    overflow: hidden;
+
+    @include on1060 {
+      width: 690px;
+    }
+
+    @include on985 {
+      width: 580px;
+    }
+
+    @include on900 {
+      width: 447px;
+    }
+
+    @include on500 {
+      width: 250px;
+      margin: 0 auto;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 50px;
+  }
+  
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0 16px;
+    align-items: center;
+
+    @include on500 {
+      grid-template-columns: auto;
+      text-align: center;
+    }
+
+  }
+
+  &__item-content {
+    padding-bottom: 70px;
+
+    @include on800 {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__item-video {
+    position: relative;
+
+    @include on900 {
+      width: 200px;
+    }
+
+    @include on480 {
+      width: 250px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__item-videobutton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  &__item-soclink {
+    margin-bottom: 12px;
+
+    @include on800 {
+      margin-bottom: 8px;
+      width: 15px;
+      height: 15px;
+    }
+
+    @include on480 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item-socimg {
+    @include on800 {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  &__item-name {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-family: 'Yeseva One', cursive;
+
+    @include on800 {
+      margin-bottom: 8px;
+    }
+
+    @include on480 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item-text {
+    margin-bottom: 15px;
+
+    @include on985 {
+      font-size: 12px;
+    }
+
+    @include on900 {
+      font-size: 10px;
+    }
+
+    @include on480 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-button {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+
+    @include on985 {
+      padding: 18px;
+    }
+
+    @include on800 {
+      padding: 10px;
+      font-size: 10px;
+    }
+
+    @include on500 {
+      bottom: 0;
+      left: 0;
+      max-width: 124px;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &__item-img {
+    @include on985 {
+      width: 250px;
+    }
+
+    @include on900 {
+      width: 200px;
+    }
+
+    @include on480 {
+      width: 250px;
+    }
+  }
+}

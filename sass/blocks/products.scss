@@ -1,0 +1,101 @@
+.products {
+
+  &__title {
+    @include on768 {
+      font-size: 15px;
+    }
+
+    @include on380 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__content {
+    gap: 50px 90px;
+    
+
+    @include on1000 {
+      gap: 67px;
+    }
+
+    @include on900 {
+      gap: 16px 30px;
+    }
+
+    @include on790 {
+      padding-bottom: 49px;
+    }
+
+    @include on450 {
+      gap: 40px 10px;
+    }
+
+   
+
+  }
+
+  &__card {
+    width: 290px;
+    text-align: center;
+    margin: 0 auto;
+
+    @include on790 {
+      width: 200px;
+    }
+
+    @include on450 {
+      width: 150px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 8px;
+
+    @include on790 {
+      width: 200px;
+    }
+
+    @include on790 {
+      margin-bottom: 6px;
+    }
+
+    @include on450 {
+      width: 150px;
+    }
+  }
+
+  &__card-price{
+    font-family: 'Yeseva One', cursive;
+    font-size: 16px;
+    margin-bottom: 12px;
+
+    @include on790 {
+      font-size: 12px;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__card-name {
+    font-family: 'Yeseva One', cursive;
+    font-size: 16px;
+    margin-bottom: 16px;
+
+    @include on790 {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__card-descr {
+    font-size: 12px;
+    margin-bottom: 27px;
+
+    @include on790 {
+      font-size: 8px;
+      margin-bottom: 18px;
+    }
+  }
+}
+
+
+

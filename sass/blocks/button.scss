@@ -1,0 +1,18 @@
+.button {
+  border: none;
+  background-color: $yellow-color;
+  font-family: Comfortaa, cursive;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 18px 54px;
+  cursor: pointer;
+
+  @include on790 {
+    padding: 10px 26px;
+    font-size: 12px;
+  }
+  @include on500 {
+    padding: 14px 41px;
+    font-size: 10px;
+  }
+}

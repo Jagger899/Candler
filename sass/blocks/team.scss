@@ -1,0 +1,107 @@
+.team {
+  background-color: $beige-middle-color;
+  padding: 80px 0 60px;
+  margin-bottom: 150px;
+
+  &__title {
+    color: $white-about-color;
+
+    @include on900 {
+      font-size: 30px;
+    }
+
+    @include on768 {
+      font-size: 15px;
+    }
+  }
+
+  &__text {
+    color: $white-about-color;
+  }
+
+  &__content {
+    padding-bottom: 0;
+    gap: 75px;
+
+    @include on1000 {
+      gap: 30px 20px;
+    }
+
+    @include on640 {
+      gap: 30px 98px;
+    }
+
+    @include on450 {
+      grid-template-columns: auto;
+    }
+  }
+
+  &__card {
+    position: relative;
+  }
+
+  &__img {
+    @include on768 {
+      width: 142px;
+    }
+
+    @include on450 {
+      width: 204px;
+    }
+  }
+
+  &__card-box {
+    background-color: $beige-dark-color;
+    color: $white-color;
+    text-align: center;
+    width: 165px;
+    padding: 6px 10px 16px;
+    position: absolute;
+    z-index: 4;
+    bottom: 13px;
+    right: 33px;
+    
+    @include on768 {
+      width: 109px;
+      padding: 6px 9px 10px;
+      bottom: 8px;
+      right: -20px;
+    }
+
+    @include on640{
+      right: auto;
+      left: 80px;
+    }
+
+    @include on450 {
+      width: 150px;
+      left: 150px;
+      bottom: -10px;
+    }
+  }
+
+  &__card-name {
+    font-family: 'Yeseva One', cursive;
+    font-size: 12px;
+
+    @include on768 {
+      font-size: 8px;
+    }
+
+    @include on450 {
+      font-size: 12px;
+    }
+  }
+
+  &__card-desc {
+    font-size: 10px;
+
+    @include on768 {
+      font-size: 7px;
+    }
+
+    @include on450 {
+      font-size: 10px;
+    }
+  }
+}

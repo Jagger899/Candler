@@ -1,0 +1,124 @@
+.promo {
+  padding: 40px 0 150px;
+
+  @include on500 {
+    padding: 30px 0 50px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__content {
+    width: 370px;
+    padding: 150px 0 250px;
+
+    @include on1000 {
+      width: 333px;
+      padding: 95px 0 70px;
+    }
+
+    @include on768 {
+      width: 230px;
+    }
+
+    @include on500 {
+      width: 180px;
+    }
+
+    @include on380 {
+      width: 204px;
+    }
+
+    @include on380 {
+      padding: 20px 0 0;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    font-family: 'Yeseva One', cursive;
+    margin-bottom: 15px;
+    font-weight: 400;
+
+    @include on768 {
+      font-size: 20px;
+    }
+
+    @include on500 {
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    @include on380 {
+      font-size: 18px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 48px;
+
+    @include on1000 {
+      margin-bottom: 30px;
+    }
+
+    @include on768 {
+      font-size: 10px;
+      margin-bottom: 20px;
+    }
+
+    @include on500 {
+      font-size: 8px;
+      margin-bottom: 15px;
+    }
+
+    @include on380 {
+      font-size: 10px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 240px;
+
+    @include on1000 {
+      left: 300px;
+    }
+
+    @include on768 {
+      left: 170px;
+    }
+
+    @include on500 {
+      left: 167px;
+    }
+
+    @include on380 {
+      left: auto;
+      right: 0;
+    }
+
+    @include on350 {
+      right: -20px;
+    }
+  }
+
+  &__img-large {
+    @include on1000 {
+      width: 655px;
+    }
+
+    @include on500 {
+      width: 308px;
+    }
+
+    @include on380 {
+      width: 164px;
+    }
+
+    @include on350 {
+      width: 114px;
+    }
+  }
+}

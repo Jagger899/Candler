@@ -1,0 +1,92 @@
+.section {
+  padding-bottom: 150px;
+  
+  @include on500 {
+    padding-bottom: 50px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 370px auto;
+
+    @include on1000 {
+      grid-template-columns: 290px auto;
+      gap: 10px;
+    }
+
+    @include on900 {
+      grid-template-columns: 200px auto;
+    }
+
+    @include on700 {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    @include on500 {
+      margin: 0 auto 30px;
+      width: 300px;
+    }
+
+    @include on450 {
+      margin: 0 auto 25px;
+      width: 235px;
+    }
+
+  }
+  
+  &__content{
+    display: grid;
+    grid-template-columns: auto auto;
+    position: relative;
+    padding-bottom: 92px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-image: url("../images/products/candle.png");
+      height: 30px;
+      width: 22px;
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      bottom: 8px;
+      background-color: $beige-dark-color;
+      height: 1px;
+      width: 500%;
+    }
+
+    &--decor {
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+
+    @include on790 {
+      padding-bottom: 49px;
+    }
+
+    @include on500 {
+      padding-bottom: 62px;
+    }
+  }
+
+  &__text {
+    @include on1000 {
+      font-size: 10px;
+      margin-bottom: 30px;
+    }
+
+    @include on380 {
+      margin-bottom: 25px;
+    }
+  }
+}

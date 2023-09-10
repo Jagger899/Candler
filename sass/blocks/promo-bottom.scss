@@ -1,0 +1,70 @@
+.promo-bottom {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/promo-bottom/bg-promo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 141px 0 145px;
+
+  @include on800 {
+    padding: 67px;
+  }
+
+  @include on500 {
+    padding: 50px 10px;
+  }
+
+  &__container {
+    display: flex;
+    // gap: 108px;
+    align-items:center;
+    justify-content: space-between;
+    padding-left: 56px;
+
+    @include on1000 {
+      padding-left: 20px;
+    }
+
+    @include on500 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__text {
+    font-family: 'Yeseva One', cursive;
+    font-size: 40px;
+    color: $white-color;
+
+    @include on800 {
+      font-size: 15px;
+    }
+
+   
+  }
+
+  &__button {
+    padding: 14px 25px 14px;
+
+    @include on1000 {
+      min-width: 135px;
+      text-align: center;
+    }
+
+    @include on800 {
+      font-size: 12px;
+      transform: translateY(100%);
+    }
+
+    @include on500 {
+      font-size: 8px;
+      min-width: 100px;
+      transform: translateY(0);
+      padding: 10px;
+    }
+
+    @include on410 {
+      transform: translateY(100%);
+    }
+    
+  }
+}
